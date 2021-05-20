@@ -10,7 +10,7 @@ import {
   JavascriptGenerator,
   GoGenerator,
   FlowGenerator,
-} from 'prisma-client-lib'
+} from '@welevel/prisma-client-lib'
 import { spawnSync } from 'npm-run'
 import { spawnSync as nativeSpawnSync } from 'child_process'
 import generateCRUDSchemaString, {
@@ -105,10 +105,20 @@ export default class GenerateCommand extends Command {
         const resolvedOutput = output.startsWith('/')
           ? output
           : path.join(this.config.definitionDir, output)
-          
+
         if (generator === 'graphql-schema') {
           if (!resolvedOutput.endsWith('.graphql')) {
-            throw new Error(`Error: ${chalk.bold('output')} for generator ${chalk.bold('graphql-schema')} should be a ${chalk.green(chalk.bold('.graphql'))}-file. Please change the ${chalk.bold('output')} property for this generator in ${chalk.green(chalk.bold('prisma.yml'))}`)
+            throw new Error(
+              `Error: ${chalk.bold('output')} for generator ${chalk.bold(
+                'graphql-schema',
+              )} should be a ${chalk.green(
+                chalk.bold('.graphql'),
+              )}-file. Please change the ${chalk.bold(
+                'output',
+              )} property for this generator in ${chalk.green(
+                chalk.bold('prisma.yml'),
+              )}`,
+            )
           }
 
           fs.mkdirpSync(path.resolve(resolvedOutput, '../'))
@@ -160,7 +170,7 @@ export default class GenerateCommand extends Command {
         if (!generators.includes(generator)) {
           this.out.error(
             `Please choose one of the supported generators. Possible generators: ${generators
-              .map(g => `${g}`)
+              .map((g) => `${g}`)
               .join(`, `)}`,
           )
         }
@@ -269,7 +279,7 @@ export default class GenerateCommand extends Command {
     this.out.log(`Saving Prisma Client (Go) at ${output}`)
     // Run "go fmt" on the file if user has it installed.
     const isPackaged = fs.existsSync('/snapshot')
-    debug({isPackaged})
+    debug({ isPackaged })
     const spawnPath = isPackaged ? nativeSpawnSync : spawnSync
     spawnPath('go', ['fmt', path.join(output, 'prisma.go')])
   }

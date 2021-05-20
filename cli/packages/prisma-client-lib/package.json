@@ -1,7 +1,7 @@
 {
-  "name": "prisma-client-lib",
-  "version": "1.23.0-test.3",
-  "author": "Tim Suchanek <suchanek@prisma.io>",
+  "name": "@welevel/prisma-client-lib",
+  "version": "2.0.0",
+  "author": "Marco Faggian <m@marcofaggian.com>",
   "license": "Apache-2.0",
   "files": [
     "dist"
@@ -29,9 +29,9 @@
     "http-link-dataloader": "^0.1.6",
     "jsonwebtoken": "^8.3.0",
     "lodash.flatten": "^4.4.0",
-    "prettier": "1.16.4",
-    "prisma-datamodel": "1.23.0-alpha.1",
-    "prisma-generate-schema": "1.20.4",
+    "prettier": "^2.3.0",
+    "prisma-datamodel": "^1.34.12",
+    "prisma-generate-schema": "^1.34.12",
     "subscriptions-transport-ws": "^0.9.15",
     "uppercamelcase": "^3.0.0",
     "ws": "^6.1.0",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@types/graphql": "14.2.0",
-    "@types/prettier": "1.16.1",
+    "@types/prettier": "^2.3.0",
     "ava": "^0.25.0",
     "graphql": "^14.3.0",
     "semantic-release": "^15.10.4",
@@ -48,7 +48,7 @@
     "typescript": "3.2.2"
   },
   "peerDependencies": {
-    "graphql": "^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0"
+    "graphql": "^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.5.0"
   },
   "prettier": {
     "semi": false,

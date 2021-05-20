@@ -1,6 +1,6 @@
 {
-  "version": "1.21.1",
-  "name": "@welevel/prisma",
+  "version": "2.0.0",
+  "name": "@welevel/prisma1",
   "description": "Prisma is a realtime GraphQL database layer. Connect directly from the frontend or build your own GraphQL server.",
   "keywords": [
     "prisma",
@@ -39,7 +39,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.0.3",
     "pkg": "^4.3.5",
-    "prettier": "1.14.3",
+    "prettier": "2.3.0",
     "progress-estimator": "0.2.2",
     "rimraf": "^2.6.1",
     "ts-node": "8.0.2",
@@ -77,9 +77,9 @@
     "gitDir": "../../"
   },
   "dependencies": {
+    "@welevel/prisma-cli-core": "^2.0.0",
     "fs-extra": "^7.0.0",
-    "prisma-cli-core": "1.1.38-alpha.24",
-    "@welevel/prisma-cli-engine": "1.1.37-alpha.2",
+    "prisma-cli-engine": "^1.34.12",
     "semver": "^5.4.1",
     "source-map-support": "^0.4.18"
   },
