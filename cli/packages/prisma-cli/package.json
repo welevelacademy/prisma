@@ -79,7 +79,7 @@
   "dependencies": {
     "fs-extra": "^7.0.0",
     "prisma-cli-core": "1.1.38-alpha.24",
-    "prisma-cli-engine": "1.1.37-alpha.2",
+    "@welevel/prisma-cli-engine": "1.1.37-alpha.2",
     "semver": "^5.4.1",
     "source-map-support": "^0.4.18"
   },
